@@ -25,7 +25,7 @@ div {
     align-items: center;
     justify-content: center;
     font-family: 'Calculator', sans-serif;
-    font-size: 96px;
+    font-size: 90px;
 }
 
 .content {
@@ -99,4 +99,11 @@ div {
 
 .otro:hover {
     background-color: rgb(87, 87, 87);    
+}
+
+#delete {
+    background-color: red;
+}
+#delete:hover{
+    background-color: rgb(255, 83, 83);
 }
