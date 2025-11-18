@@ -34,22 +34,20 @@ function operate(number, operator, otherNumber){
 const display = document.querySelector(".content");
 
 function addToDisplay(event){
-    if(display.scrollWidth < display.clientWidth + 1){
-        const number = event.currentTarget
-        display.textContent += number.textContent
-    }
+    display.textContent += event.target.textContent
 }
 
 function updateDisplay(event){
-    operator = event.currentTarget.textContent;
-    numberDisplay = display.textContent;
+    operator = event.target.textContent
+    numberDisplay = display.textContent
 }
 
 function displayResult(){
-    otherNumberDisplay = display.textContent;
-    const result = operate(numberDisplay, operator, otherNumberDisplay);
-    display.textContent = result;
-    operatorPressed = false;
+
+}
+
+function clearDisplay(){
+    display.textContent = "";
 }
 
 const allNumbers = document.querySelectorAll(".number");
@@ -66,3 +64,6 @@ for(let i = 0; i < allOperators.length; i++){
 
 const equalsTo = document.querySelector("#equals");
 equalsTo.addEventListener("click", displayResult)
+
+const clear = document.querySelector("#C");
+clear.addEventListener("click", clearDisplay)
